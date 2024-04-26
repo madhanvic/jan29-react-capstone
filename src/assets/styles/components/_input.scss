@@ -1,0 +1,29 @@
+.form__group {
+  input {
+    width: 100%;
+    font-family: dmsans;
+    font-weight: 300;
+    background-color: $grey-clr--700;
+    color: $white-clr;
+    font-size: clamp(1.4rem, 1vw, 1.6rem);
+    padding: clamp(1rem, 2vh, 1.5rem) clamp(1rem, 0.85vw, 1.5rem);
+    border-radius: 0.3rem;
+    border: none;
+    &::placeholder {
+      font-size: clamp(1.4rem, 1vw, 1.6rem);
+      font-family: dmsans;
+      font-weight: 300;
+      color: $grey-clr--400;
+    }
+    &:focus {
+      outline: none;
+    }
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
+      display: none;
+    }
+    &.error {
+      border: 1px solid $danger-clr;
+    }
+  }
+}
