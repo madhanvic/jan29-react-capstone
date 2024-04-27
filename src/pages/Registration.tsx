@@ -4,9 +4,7 @@ const Registration = () => {
   return (
     <main className="register">
       <div className="register__banner">
-        <h1>
-          Discover new things on <br /> Super app
-        </h1>
+        <h1>Discover new things on Super app</h1>
       </div>
       <div className="register__form--wrapper">
         <div className="register__form--subWrapper">

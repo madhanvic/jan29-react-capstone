@@ -1,3 +1,15 @@
+.wrapper {
+  width: 92%;
+  max-width: 1800px;
+  min-width: 300px;
+  padding-inline: clamp(2.5rem, 2.25vw, 4rem);
+  margin-inline: auto;
+}
+
+.card__rounded {
+  border-radius: 1.5rem;
+}
+
 small.error__msg {
   display: inline-block;
   color: $danger-clr;

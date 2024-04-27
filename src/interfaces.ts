@@ -47,3 +47,14 @@ export interface FormErrorInterface {
   mobile: string | null;
   shareMyRegistrationData: string | null;
 }
+
+export interface CategoryInterface {
+  entites: string[];
+  data: {
+    [key: string]: {
+      id: string;
+      name: string;
+      img: string;
+    };
+  };
+}
