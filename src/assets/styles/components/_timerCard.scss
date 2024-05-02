@@ -1,0 +1,43 @@
+.timer__card {
+  background-color: $darkBlue-clr--600;
+  display: flex;
+  padding: 2rem 4rem;
+  &--display {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: $darkBlue-clr--700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--loader {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      aspect-ratio: 1 / 1;
+      color: $white-clr;
+      font-family: inherit;
+      font-weight: 500;
+      font-size: 3.2rem;
+    }
+  }
+  &--controlPanel {
+  }
+  &--controls {
+    &-sep {
+      &--text {
+      }
+    }
+    &--actions {
+      button {
+        img {
+        }
+      }
+    }
+    &--value {
+    }
+  }
+  &--start {
+  }
+}

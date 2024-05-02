@@ -2,51 +2,51 @@ import React, { useState } from "react";
 import { CategoryInterface } from "../interfaces";
 
 const categorys: CategoryInterface = {
-  entites: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  entites: ["28", "18", "10749", "53", "37", "27", "14", "10402", "878"],
   data: {
-    ["1"]: {
-      id: "1",
+    ["28"]: {
+      id: "28",
       name: "Action",
       img: "/src/assets/images/action.png",
     },
-    ["2"]: {
-      id: "2",
+    ["18"]: {
+      id: "18",
       name: "Drama",
       img: "/src/assets/images/drama.png",
     },
-    ["3"]: {
-      id: "3",
+    ["10749"]: {
+      id: "10749",
       name: "Romance",
       img: "/src/assets/images/romance.png",
     },
-    ["4"]: {
-      id: "4",
+    ["53"]: {
+      id: "53",
       name: "Thriller",
       img: "/src/assets/images/thriller.png",
     },
-    ["5"]: {
-      id: "5",
+    ["37"]: {
+      id: "37",
       name: "Western",
       img: "/src/assets/images/western.png",
     },
-    ["6"]: {
-      id: "6",
+    ["27"]: {
+      id: "27",
       name: "Horror",
       img: "/src/assets/images/horror.png",
     },
-    ["7"]: {
-      id: "7",
+    ["14"]: {
+      id: "14",
       name: "Fantasy",
       img: "/src/assets/images/fantasy.png",
     },
-    ["8"]: {
-      id: "8",
+    ["10402"]: {
+      id: "10402",
       name: "Music",
       img: "/src/assets/images/music.png",
     },
-    ["9"]: {
-      id: "9",
-      name: "Fiction",
+    ["878"]: {
+      id: "878",
+      name: "Science Fiction",
       img: "/src/assets/images/fiction.png",
     },
   },
@@ -81,7 +81,12 @@ const EntertainmentCategory = () => {
     }
     setError(false);
     const finalizedSelectedCategories = selectedCategories.map(
-      (selectedCategory) => categorys.data[selectedCategory].name
+      (selectedCategory) => {
+        return {
+          name: categorys.data[selectedCategory].name,
+          id: categorys.data[selectedCategory].id,
+        };
+      }
     );
     localStorage.setItem(
       "categories",

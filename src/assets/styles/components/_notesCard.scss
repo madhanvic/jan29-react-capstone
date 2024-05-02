@@ -1,0 +1,41 @@
+.notes__card {
+  background-color: $sandal-clr--500;
+  padding: clamp(3.8rem, 2.75vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h3 {
+    font-size: clamp(2.6rem, 1.85vw, 3.2rem);
+    font-family: inherit;
+    font-weight: 600;
+    color: $black-clr;
+    margin-bottom: clamp(1.4rem, 2.4vh, 2rem);
+  }
+  &--editor {
+    flex-grow: 1;
+    font-size: clamp(1.5rem, 1.15vw, 1.8rem);
+    font-weight: 400;
+    font-family: inherit;
+    color: $black-clr;
+    line-height: 3rem;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 0.2rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $sandal-clr--500;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $black-clr;
+    }
+  }
+}

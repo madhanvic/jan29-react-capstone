@@ -1,0 +1,74 @@
+.profile__card {
+  display: flex;
+  column-gap: clamp(2rem, 2.25vw, 4rem);
+  justify-content: space-between;
+  align-items: center;
+  background-color: $violet-clr--500;
+  padding: clamp(1.2rem, 1.25vw, 2rem);
+  &--img {
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
+  &--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    flex-grow: 1;
+  }
+  &--name {
+    font-size: clamp(1.5rem, 1.15vw, 1.8rem);
+    font-family: inherit;
+    color: $white-clr;
+    font-weight: 300;
+  }
+  &--mail {
+    font-size: clamp(1.5rem, 1.15vw, 1.8rem);
+    font-family: inherit;
+    color: $white-clr;
+    font-weight: 300;
+    padding-top: clamp(0.4rem, 1.3vh, 0.8rem);
+  }
+  &--userId {
+    font-family: inherit;
+    font-size: clamp(2.4rem, 1.75vw, 3rem);
+    font-weight: 500;
+    color: $white-clr;
+    letter-spacing: 0.2rem;
+  }
+  &--categories {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 1.05vw, 1.6rem);
+
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 0.2rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $violet-clr--500;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $white-clr;
+    }
+  }
+  &--category {
+    display: flex;
+    align-items: center;
+    background-color: $violet-clr--300;
+    color: $white-clr;
+    font-size: clamp(1.3rem, 1vw, 1.5rem);
+    font-weight: 300;
+    font-family: inherit;
+    border-radius: 100px;
+    width: 30%;
+    min-width: clamp(10rem, 6.25vw, 12rem);
+    padding: clamp(0.4rem, 1.2vh, 0.7rem) clamp(1rem, 0.95vw, 1.4rem);
+  }
+}
