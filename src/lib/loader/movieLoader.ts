@@ -1,3 +1,5 @@
+import { defer } from "react-router-dom";
+
 export const loader = async () => {
   const response = localStorage.getItem("categories");
   if (response !== null) {
@@ -34,9 +36,8 @@ export const loader = async () => {
         });
       }
     );
-    console.log(genreList);
 
     const setelledpromises = await Promise.allSettled(genreList);
-    return setelledpromises;
+    return defer({ setelledpromises });
   }
 };

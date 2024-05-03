@@ -1,8 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import { useAsyncValue } from "react-router-dom";
 import { Data } from "../../lib/loader/homeLoader";
 
 const WeatherCard = () => {
-  const data = useLoaderData() as Data;
+  const data = useAsyncValue() as Data;
 
   const dateObj = new Date(data.weather.localtime);
 

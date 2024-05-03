@@ -1,4 +1,4 @@
-import { LoaderFunction } from "react-router-dom";
+import { LoaderFunction, defer } from "react-router-dom";
 import { credential } from "../../credential";
 
 export interface Data {
@@ -18,7 +18,7 @@ export interface Data {
   };
 }
 
-export const homeLoader: LoaderFunction = async (): Promise<Data> => {
+export const homeLoader: LoaderFunction = async () => {
   const coordinates: { latitude: null | number; longitude: null | number } = {
     latitude: null,
     longitude: null,
@@ -58,9 +58,8 @@ export const homeLoader: LoaderFunction = async (): Promise<Data> => {
     `https://newsapi.org/v2/top-headlines?country=in&apiKey=${credential.newsApiKey}`
   );
   const newsData = await newsResponse.json();
-  console.log(newsData);
 
-  return {
+  return defer({
     weather: {
       localtime: weatherData.location.localtime,
       weatherImg: weatherData.current.condition.icon,
@@ -75,5 +74,5 @@ export const homeLoader: LoaderFunction = async (): Promise<Data> => {
       img: newsData.articles[0].urlToImage,
       content: newsData.articles[0].description,
     },
-  };
+  });
 };
